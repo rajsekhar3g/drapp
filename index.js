@@ -74,7 +74,7 @@ app.delete('/deleteappointment', function (req, res) {
             for(const [j,appointment] of physician.calendar.entries()){
             if(appointment.uniqueId == appointmentId){
                 delete physiciansObject.physicians[i].calendar[j];
-                fs.writeFileSync('data2.json', JSON.stringify(physiciansObject));
+                fs.writeFileSync('data.json', JSON.stringify(physiciansObject));
                 success = true;
             }
             }
